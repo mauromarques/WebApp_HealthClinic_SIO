@@ -1,0 +1,7 @@
+|||--------TEST RESULT ------|||
+|||                          |||
+|||   DOCTOR: Maria do Carmo |||
+|||   SERVICE: Service1      |||
+|||   RESULT: POSITIVE       |||
+|||                          |||
+|||--------------------------|||

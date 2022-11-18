@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>eHealth Corp</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <!-- <script src="/WebResources/js/jquery-3.5.1.min.js"></script> -->
+        <!-- <script src="/WebResources/js/bootstrap.min.js"></script> -->
+        <link href="/WebResources/css/styles.css" rel="stylesheet" />
+    </head>
+    <body onload="getServices(), getDoctors(), checkLogin()">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">HC</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#home">Home</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#ser">Services</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#spe">Specialities</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#doc">Our Doctors</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="appointments">Appointments</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#con">About us</a></li>
+                            <i class="bi bi-person-fill"></i>
+                            <li class="nav-item"  id="userButton"><a class="nav-link active" aria-current="page" href="loginregister">Log in to Patient Account</a></li>
+                        </ul>
+                    </div>   
+                </div>    
+            </nav>  
+        </header>
+        <!-- Home section-->
+        <section class="home" id="home">
+          <div class="row align-items-center container my-5 mx-auto">
+              <div class="text col-lg-6 col-md-6 col-12 pt-5 pb-5">
+                  <h2 style="color:#2c4964;">Welcome to eHealth Corp</h2>
+                  <hr>
+                  <p>Our goal is to take care of your health and contribute to a better quality of life.</p>
+
+              </div>
+              <div class="img col-lg-6 col-md-6 col-12 pt-5 pb-5">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Ou0Zq71YTNI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+          </div>
+      </section>
+      <!-- Services --> 
+      <section id="ser" class="ser">
+              <div class="album py-5 bg-light">
+                <div class ="title">
+                <h2 class="text-center"style="color:#2c4964;">Services</h2>
+                </div>
+            <div class="container">
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                  <div class="card ">
+              <img src="/WebResources/c_service.jpeg" alt="cardiology" height="200px">
+                    <div class="card-body">
+                <h5>Cardiology</h5>
+                      <p class="card-text">Cardiac Rehabilitation,Heart Rhythm Monitoring,Stress Testing,Echocardiography.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="/WebResources/p_service.jpg" alt="pulmonology" height="200px">
+                    <div class="card-body">
+                <h5>Pulmonology</h5>
+                      <p class="card-text">Asthma,Bronchoscopy,Critical Care,Lung Cancer,Thoracoscopy,Pulmonary Hypertension.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+              <img src="/WebResources/o_service.jpeg" alt="orthopedics" height="200px">
+                    <div class="card-body">
+                <h5>Orthopedics</h5>
+                      <p class="card-text">Fractures,Dislocation,Need for amputation,Bone tumors,Bone infections,Bone deformities.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          </div>
+        </section>
+     <!--Specialities section-->
+      <section id="spe" class="spe">
+        <div class="container">
+  
+          <div class="section-title text-center">
+            <h2 style="color:#2c4964;">Specialities</h2>
+          </div>
+  
+          <div class="row gy-4">
+            <div class="col-lg-3">
+              <ul class="nav nav-tabs flex-column" id="SpecialitiesButtons">
+              </ul>
+            </div>
+            <div class="col-lg-9">
+              <div class="tab-content" id="SpecialitiesContent">
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      <!--Doctors --> 
+      <section id="doc" class="doc">
+        <div class="album py-5 bg-light">
+          <div class = "title">
+            <h2 class="text-center" style="color:#2c4964;">Our Doctors</h2>
+          </div>
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="DoctorsContainer">
+        </div>
+      </section>
+      <!--Contact-->
+      <section class="contacts" id = "contacts">
+        <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+        <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly.</p>
+        <div class="row">
+            <div class="d-flex justify-content-center mb-1">
+                <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="md-form mb-0">
+                                <input type="text" id="name" name="name" class="form-control">
+                                <label for="name" class="">Your name</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="md-form mb-0">
+                                <input type="text" id="email" name="email" class="form-control">
+                                <label for="email" class="">Your email</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="md-form mb-0">
+                                <input type="text" id="subject" name="subject" class="form-control">
+                                <label for="subject" class="">Subject</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <div class="md-form">
+                                <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                                <label for="message">Your message</label>
+                            </div>
+
+                        </div>
+                    </div>
+                  <div class = "d-flex justify-content-center ">
+                    <a class="btn btn-primary" onclick="postContact()">Send</a>
+                  </div>
+                </form>
+                <div class="status"></div>
+            </div>
+        </div>
+      </section>
+<!--Section: Contact v.2-->
+      <!-- Footer -->
+      <section class="con" id="con">
+        <footer style="background-color: #b0c4de;">
+        <div class="container p-4">
+          <div class="row">
+            <div class="col-lg-6 col-md-12 mb-4">
+              <h5 class="mb-3" style="letter-spacing: 2px; color: #000000;">About us</h5>
+              <p style="letter-spacing: 0.3px; color: #000000;">
+                eHealth Corp is a health clinic, located in Aveiro, that covers the areas of cardiology,pulmonology and orthopedics.It was founded in 1995 and has been playing an important role in cardiovascular research.
+              </p>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+              <h5 class="mb-3" style="letter-spacing: 2px; color: #000000;">Contacts</h5>
+              <ul class="list-unstyled mb-0">
+                <li class="mb-1">
+                  <a style="color: #000000;">ehealthcorp@gmail.com</a>
+                </li>
+                <li class="mb-1">
+                  <a style="color: #000000;">123 456 789</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+              <h5 class="mb-1" style="letter-spacing: 2px; color: #000000;">opening hours</h5>
+              <table class="table" style="color: #000000; border-color: #000000;">
+                <tbody>
+                  <tr>
+                    <td>Mon - Fri:</td>
+                    <td>8am - 9pm</td>
+                  </tr>
+                  <tr>
+                    <td>Sat - Sun:</td>
+                    <td>8am - 1am</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="/WebResources/js/scripts.js"></script>
+        <script src="/WebResources/functions.js"></script>
+        <script src="/WebResources/loginManager.js"></script>
+
+    </body>
+    
+</html>
